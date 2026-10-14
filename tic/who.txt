@@ -15,11 +15,11 @@ Cities are legally responsible for these deaths and pay Rs 30 lakh in compensati
 5. Contractors
 Responsible contractors gain a fair system. They are no longer undercut by those who skip safety, because payment now depends on safety records.
 
-6. The environment
-Methane is a strong greenhouse gas. Mapping where it builds up in sewers is a first step to reducing these emissions.
-
-7. Indian innovation
+6. Indian innovation
 Many good sensors developed in Indian labs never reach real use. Saans creates a path from lab to field. Once the platform exists, new and better sensors can plug into it.
+
+7. ESG and the SDGs
+Saans supports SDG 8.8 (safe working conditions), SDG 6 (safe sanitation), SDG 3.9 (fewer deaths from hazardous gases), SDG 10 (reducing inequality) and SDG 13 (climate, since methane is a strong greenhouse gas). It covers all three ESG pillars: worker safety (Social), methane tracking (Environmental) and an auditable safety record for contractors (Governance). Sanitation and preventive health are eligible CSR activities in India, so companies can fund Saans pilots through CSR.
 
 Scale of impact
 Phase 1 in one ward can protect around 50 crews. A full city rollout can cover thousands of workers. A national rollout linked to NAMASTE can protect every registered sewer worker in India and their families.
