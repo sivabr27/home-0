@@ -80,7 +80,7 @@ ${A(1.2,'left','left:120px;top:900px','<div style="border-left:8px solid var(--w
 ${A(4.2,'up','left:1000px;top:390px;width:820px','<svg width="760" height="160"><path id="sig" d="M0 140 L120 138 L200 134 L260 120 L300 60 L340 30 L420 26 L520 28 L620 27 L760 28" fill="none" stroke="var(--ok)" stroke-width="8" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg><div class="p">Methane and H<sub>2</sub>S detected in real time</div>')}
 ${A(7.6,'pop','left:1000px;top:640px','<div class="card" style="display:flex;align-items:center;gap:26px"><div style="font-size:84px;font-weight:900;color:var(--warn)">₹2,500</div><div><div class="h3">low-cost prototype</div><div class="p">built by students in Hyderabad</div></div></div>')}
 <div id="jar" class="a" data-t="11" data-fx="drop" style="left:220px;top:150px"><svg width="680" height="700" viewBox="0 0 680 700"><path d="M60 690 L60 220 Q60 40 340 40 Q620 40 620 220 L620 690" fill="rgba(160,200,255,.08)" stroke="rgba(200,225,255,.55)" stroke-width="8"/><rect x="290" y="10" width="100" height="40" rx="14" fill="rgba(200,225,255,.55)"/><rect x="20" y="680" width="640" height="20" rx="8" fill="#3b6189"/></svg></div>
-${A(12,'up','left:1000px;top:850px','<div class="h2 bad">...but it stays in the lab.</div>')}
+${A(12,'up','left:1000px;top:790px','<div class="h2 bad">...but it stays in the lab.</div>')}
 `);
 hooks.push((t)=>{const lt=t-s2.s;document.getElementById('sig').style.strokeDashoffset=1-ease((lt-4.5)/2.2);
  document.querySelectorAll('.mol').forEach(m=>{const i=+m.dataset.i;const ph=((lt*0.35+i/14)%1);const ang=i*0.9;const r=520*(1-ph);m.style.left=(560+Math.cos(ang)*r)+'px';m.style.top=(510+Math.sin(ang)*r*0.7)+'px';m.style.opacity=(clamp(lt-2)*clamp(1-(lt-10.5))*Math.sin(ph*Math.PI)*.9).toFixed(3)});});
@@ -106,7 +106,7 @@ ${A(7.8,'scale','left:220px;top:830px','<div class="h2" style="color:var(--mute)
 
 // ===== S5: SAANS platform =====
 const steps=['Work order','Machine first','Air check','Stop unsafe work','Verified record'];
-const pipe=`<div style="position:absolute;left:180px;top:850px;width:1560px;height:4px;background:#2a4562"></div><div id="pipeFill" style="position:absolute;left:180px;top:850px;height:4px;width:0;background:var(--ok)"></div>`+steps.map((s,i)=>`<div class="node" style="position:absolute;left:${80+i*390}px;top:810px"><div class="dot" id="nd${i}">${i+1}</div><div class="lab" id="nl${i}">${s}</div></div>`).join('');
+const pipe=`<div style="position:absolute;left:180px;top:850px;width:1320px;height:4px;background:#2a4562"></div><div id="pipeFill" style="position:absolute;left:180px;top:850px;height:4px;width:0;background:var(--ok)"></div>`+steps.map((s,i)=>`<div class="node" style="position:absolute;left:${80+i*330}px;top:810px"><div class="dot" id="nd${i}">${i+1}</div><div class="lab" id="nl${i}">${s}</div></div>`).join('');
 const stage5=(t0,t1,html)=>`<div class="st5" data-a="${t0}" data-b="${t1}" style="position:absolute;left:0;top:0;width:1920px;height:780px;opacity:0">${html}</div>`;
 const gauge=(name,id,x)=>`<div style="position:absolute;left:${x}px;top:250px;width:260px;text-align:center"><div style="height:380px;width:90px;margin:0 auto;border-radius:45px;background:#132840;border:3px solid #2a4562;position:relative;overflow:hidden"><div id="${id}" style="position:absolute;bottom:0;left:0;right:0;height:20%;background:var(--ok)"></div></div><div class="h3" style="margin-top:16px">${name}</div><div class="p" id="${id}v">safe</div></div>`;
 const s5=scene('p5',`
@@ -125,7 +125,7 @@ hooks.push((t)=>{const lt=t-s5.s;
  document.querySelectorAll('.st5').forEach(e=>{const a=+e.dataset.a,b=+e.dataset.b;const o=clamp((lt-a)/.45)*clamp((b-lt)/.45);e.style.opacity=o;e.style.transform=`translateY(${(1-ease((lt-a)/.6))*30}px)`});
  const bounds=[4.4,9.6,14,18.6,23.4];let cur=-1;bounds.forEach((b,i)=>{if(lt>=b)cur=i});
  for(let i=0;i<5;i++){const d=document.getElementById('nd'+i),l=document.getElementById('nl'+i);const on=i<=cur;d.style.borderColor=on?(i==3?'var(--bad)':'var(--ok)'):'#2a4562';d.style.color=on?'#0B1726':'var(--mute)';d.style.background=on?(i==3?'var(--bad)':'var(--ok)'):'var(--bg2)';d.style.transform=`scale(${i==cur?1.15:1})`;l.style.color=i==cur?'var(--ink)':'var(--mute)'}
- document.getElementById('pipeFill').style.width=(1560*clamp((lt-4.4)/(23.4-4.4+1)))+'px';
+ document.getElementById('pipeFill').style.width=(1320*clamp((lt-4.4)/(23.4-4.4+1)))+'px';
  const g=(id,p,bad)=>{const e=document.getElementById(id);e.style.height=(20+70*p)+'%';e.style.background=bad&&p>.6?'var(--bad)':(p>.4?'var(--warn)':'var(--ok)');document.getElementById(id+'v').textContent=bad&&p>.6?'UNSAFE':(p>.4?'rising':'safe');document.getElementById(id+'v').style.color=bad&&p>.6?'var(--bad)':'var(--mute)'};
  g('g1',.35*ease((lt-14.6)/2),false);g('g2',ease((lt-15)/2.6),true);g('g3',.15,false);
  const al=document.getElementById('alarm');al.style.transform=`scale(${1+.04*Math.sin(lt*10)})`;});
@@ -140,7 +140,7 @@ ${A(3.2,'up','left:120px;top:560px',fam)}
 ${A(5.6,'up','left:1080px;top:520px',city)}
 ${A(.4,'up','left:120px;top:100px;width:1700px','<div class="h1">A manhole looks like a small place for impact.</div>')}
 ${A(3.4,'up','left:120px;top:210px;width:1700px','<div class="h2" style="color:var(--mute)">Behind every worker is a <span class="warn">family</span>. Under every city, the same <span style="color:var(--gas)">gases</span> build up silently.</div>')}
-${A(8.6,'up','left:1080px;top:800px;width:700px','<div class="p">Every Saans reading also maps where a city\'s sewers are at risk.</div>')}
+${A(8.6,'up','left:1080px;top:770px;width:480px','<div class="p">Every Saans reading also maps where a city\'s sewers are at risk.</div>')}
 <div id="hot" style="position:absolute;left:1080px;top:520px;width:560px;height:220px">${[[90,170],[300,190],[470,160]].map(([x,y],i)=>`<div class="hs" data-i="${i}" style="position:absolute;left:${x}px;top:${y}px;width:40px;height:40px;margin:-20px;border-radius:50%;background:rgba(184,224,90,.8);opacity:0"></div>`).join('')}</div>
 `);
 hooks.push((t)=>{const lt=t-s6.s;document.querySelectorAll('.ring').forEach(r=>{const i=+r.dataset.i;const ph=((lt*.35+i/3)%1);const R=100+ph*900;r.style.width=R+'px';r.style.height=R+'px';r.style.marginLeft=(-R/2)+'px';r.style.marginTop=(-R/2)+'px';r.style.opacity=(clamp(lt-.5)*(1-ph)).toFixed(3)});
