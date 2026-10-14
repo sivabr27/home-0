@@ -1,26 +1,31 @@
 Saans connects four things that work separately today: gas detection, work orders, safety records and municipal monitoring. The steps below are a proposal to be tested in a pilot.
 
 1. Mechanisation first
-Every job starts on the Saans app as a work order. The default option is mechanised cleaning, using machines already being supplied under schemes like NAMASTE. Human entry is only recorded as an exception, with the reason and the officer who approved it.
+Every job starts on the Saans app as a work order. The default option is mechanised cleaning. Human entry is recorded only as an exception, with the legal reason and the officer who approved it.
 
 2. Reliable detection
-In the rare cases where entry is allowed, the crew uses a rugged detector for methane, hydrogen sulphide and oxygen. Low-cost sensors often fail in sewers because humidity causes drift and false readings. My PhD research is on gas sensors, so I can work on humidity compensation and simple calibration checks. The device will be field tested before any use. A sensor that gives false alarms gets ignored. A sensor that misses gas can kill.
+In exceptional cases where entry is permitted, the crew uses a rugged detector for methane, hydrogen sulphide and oxygen. Low-cost sensors often fail in sewers because humidity causes drift and false readings. My PhD research is on gas sensors, so I can work on humidity compensation and simple calibration checks. The device will be field tested before use. A sensor that gives false alarms gets ignored. A sensor that misses gas can kill.
 
 3. Stop unsafe work
-Readings are logged with location and time. If the air is unsafe, the app raises a stop-work alert to the supervisor and the city officer. Work stays stopped until ventilation, protective equipment and the full safety checklist are completed and logged. The sensor never replaces these steps. It adds a check on top of them.
+Readings are logged with location and time. If the air is unsafe, the app sends a stop-work alert to the supervisor and the city officer. Work stays stopped until ventilation, protective equipment and the full safety checklist are completed and logged. The sensor never replaces these steps. It adds a check on top of them.
 
 4. Verified accountability
-Each job gets a digital safety record showing whether the required checks were done, whether unsafe conditions were found and what action followed. Contractor payments and performance ratings can be linked to compliance with the full safety process, not to a single gas reading. This avoids the risk of rushed or faked readings. Random independent audits and tamper-proof device logs will check that records match reality.
+Each job gets a digital safety record showing whether the required checks were done, whether unsafe conditions were found and what action followed. Contractor payments and performance ratings can be linked to compliance with the full safety process, not to a single gas reading, subject to procurement rules. Random independent audits and tamper-proof device logs will check that records match reality.
 
 5. City risk map
-All readings feed a municipal dashboard. Over time it can show where gas builds up repeatedly, where lines may be blocked and where hydrogen sulphide may be damaging pipes. Cities can use this to plan maintenance and prioritise mechanisation in the riskiest areas.
+All readings feed a municipal dashboard. Over time it can show where gas builds up repeatedly and where lines may be blocked or damaged. Cities can use this to plan maintenance and prioritise mechanisation in the riskiest areas.
 
 Proposed rollout
-- Phase 1: A six-month pilot in one ward with about 50 crews. Measure the share of jobs done by machine, safety checks completed, unsafe conditions detected, work stopped in time and sensor reliability.
+- Phase 1: A six-month pilot in one ward with about 50 crews. Measure the share of jobs done by machine, safety checks completed, unsafe conditions detected, stop-work response times and sensor reliability.
 - Phase 2: Expand to more wards and connect with the city's work-order system and NAMASTE worker records.
 - Phase 3: Offer the system to other cities. Add fixed sensors at high-risk locations where continuous monitoring is useful.
 
 Each phase will scale only if the previous one shows results.
 
-Why now
-The legal duty and government schemes already exist. Each sewer death now costs the state Rs 30 lakh in compensation. What is missing is a reliable way to make sure the rules are followed on every job. That needs a partner who can manufacture rugged hardware at scale, build city-wide digital platforms and bring a strong zero-harm safety culture.
+What a partner must bring
+Saans needs a partner that can connect three capabilities:
+- Manufacturing rugged, calibrated sensors at scale and maintaining them in the field.
+- Building and running a secure city-level digital platform that links with municipal work-order systems.
+- Deploying in the field alongside municipal authorities, backed by a strong zero-harm safety culture.
+
+With these three in place, Saans can move from a lab prototype to a working system in every ward.

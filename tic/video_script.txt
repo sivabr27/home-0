@@ -2,14 +2,14 @@ Sanitation workers in India still die inside sewers. Not because we lack rules o
 
 I have spent my PhD building gas sensors. A methane or hydrogen sulphide sensor is not rocket science. Students in Hyderabad have built one for 2,500 rupees. But sensors like these mostly stay in labs.
 
-The rules are not missing either. The law has banned hazardous sewer cleaning since 2013. The Supreme Court has ordered governments to phase out manual sewer cleaning, and every death now costs the state 30 lakh rupees. A national scheme already provides training, protective gear and safety devices.
+The rules are not missing either. The law prescribes safety requirements for sewer work. The Supreme Court has ordered the phased eradication of manual sewer cleaning and 30 lakh rupees compensation for every death. A national scheme already provides training, protective gear and safety devices.
 
 The real gap is follow-through. Was the job done by machine? Was the air checked? Was unsafe work stopped? Today, nobody can easily prove it.
 
-My idea, Saans, is a safety platform that closes this gap. Every job starts as a digital work order, with mechanised cleaning as the default. In the rare cases where entry is legally allowed, a rugged sensor checks the air. If it is unsafe, work stops. Every step is logged with time and location. Contractors are judged and paid on verified compliance with the full safety process, with independent audits to keep the records honest.
+My idea, Saans, is a safety platform that closes this gap. Every job starts as a digital work order, with mechanised cleaning as the default. In exceptional cases where entry is legally permitted, a rugged sensor checks the air. If it is unsafe, work stops. Every step is logged with time and location. Contractors are judged on verified compliance with the full safety process, with independent audits to keep records honest.
 
-A manhole may look like a small place for impact. But behind every worker is a family, and under every city the same gases build up silently. Every Saans reading also helps the city see where its sewers are at risk.
+A manhole may look like a small place for impact. But behind every worker is a family, and under every city the same gases build up silently.
 
-To scale this, we need a partner who can build rugged hardware, run city-wide platforms and lives by a zero-harm safety culture.
+To scale this, we need a partner who can manufacture rugged sensors, run a city-level digital platform and deploy in the field with municipal authorities.
 
-The sensor exists. The law exists. Saans makes sure they work together.
+India does not need another sensor that stays in a lab. It needs a system that makes detection lead to action. That is Saans.

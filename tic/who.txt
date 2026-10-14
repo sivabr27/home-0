@@ -1,16 +1,16 @@
 A manhole looks like a small place to create impact. But one unsafe job can affect a worker, a family and a whole neighbourhood.
 
 1. Sanitation workers
-About 90,000 sewer and septic tank workers have been profiled under NAMASTE as of April 2026. Many more work informally through contractors. Most come from marginalised communities and have little power to refuse unsafe work. Saans pushes jobs towards machines and makes sure no one goes in without verified safety checks. It also gives workers a record they can rely on if something goes wrong.
+As of September 2026, 90,186 sewer and septic tank workers have been validated under NAMASTE. Many more work informally through contractors. Most come from marginalised communities and have little power to refuse unsafe work. Saans pushes jobs towards machines and makes sure no one goes in without verified safety checks. It also gives workers a record they can rely on if something goes wrong.
 
 2. Their families
-Most of these workers are their family's main earner. Reports of past deaths show families moving back to villages and children leaving school to work. Compensation can take months or years and some families never receive it. Preventing one death protects a whole household.
+Most of these workers are their family's main earner. Reports of past deaths describe families moving back to villages and children leaving school to work. Compensation can take months or years and some families never receive it. Preventing one death protects a whole household.
 
 3. Cities and residents
 The same gases that harm workers can build up in sewer networks. In 1995, sewer gas blasts in Delhi blew off about 40 manhole covers and injured 14 people. Hydrogen sulphide also corrodes concrete sewer pipes. The Saans risk map helps cities find recurring problem spots and fix them early.
 
 4. City governments
-Cities are responsible for these deaths and the Rs 30 lakh compensation. Saans gives officials a way to check that contractors follow the rules, spot repeat violations and show proof of compliance. It also shows where mechanisation is most needed.
+The Supreme Court has directed Rs 30 lakh compensation for each sewer death, payable by the responsible government or agency. Saans gives officials a way to check that contractors follow the rules, spot repeat violations and show proof of compliance. It also shows where mechanisation is most needed.
 
 5. Contractors
 Responsible contractors can prove their safety record. They are no longer undercut by those who cut corners, because performance is judged on verified compliance.
@@ -18,10 +18,10 @@ Responsible contractors can prove their safety record. They are no longer underc
 6. Indian research
 Low-cost sensors built in Indian labs often stay there. Saans creates a path from prototype to field testing, manufacturing and maintenance. Better sensors can plug into the platform over time.
 
-7. ESG and the SDGs
-Saans supports SDG 8.8 (safe working conditions), SDG 6 (safe sanitation), SDG 3.9 (fewer deaths from hazardous gases), SDG 10 (reducing inequality) and SDG 13 (methane is a strong greenhouse gas). It covers all three ESG pillars: worker safety (Social), methane tracking (Environmental) and auditable contractor records (Governance). Sanitation and preventive health are eligible CSR activities, so companies can fund pilots through CSR.
+Broader alignment
+Saans directly supports safe working conditions (SDG 8.8) and safe sanitation (SDG 6). Methane data may later support climate reporting, but that is a secondary benefit.
 
 Scale of impact
-The proposed pilot covers about 50 crews in one ward. Expansion will depend on results. The long-term aim is to support every city in moving to mechanised cleaning, with Saans as the safety net for exceptional cases.
+The proposed pilot covers about 50 crews in one ward. Expansion will depend on results. The long-term aim is to support every city in moving to mechanised cleaning, with Saans as the safety net for exceptional cases. Zero sewer deaths is the long-term goal.
 
-The goal is not just a device that tells a worker whether the air is safe. It is a system that makes sure the responsible people act when it is not.
+The innovation is not just detecting dangerous gas. It is making sure that detection leads to action.

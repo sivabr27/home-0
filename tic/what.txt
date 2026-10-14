@@ -1,9 +1,9 @@
 Sanitation workers in India still die while cleaning sewers and septic tanks. Government data cited in Parliament records 498 such deaths between January 2019 and June 2026. Toxic gases such as hydrogen sulphide and methane, along with low oxygen, are major causes.
 
-India already has the rules. The 2013 Manual Scavengers Act bans hazardous cleaning. In 2023 the Supreme Court directed governments to phase out manual sewer cleaning and raised compensation to Rs 30 lakh per death. The NAMASTE scheme provides training, protective equipment and safety devices. Low-cost gas sensors have also been built in Indian labs.
+The rules and schemes already exist. The 2013 Manual Scavengers Act and Rules regulate hazardous cleaning and prescribe safety requirements. In 2023 the Supreme Court directed the phased eradication of manual sewer cleaning. The NAMASTE scheme provides training, protective equipment and safety devices. Low-cost gas sensors have also been built in Indian labs.
 
-The gap is follow-through. Nobody can easily verify whether safety steps were actually taken before a job, whether unsafe work was stopped or who is accountable when it was not.
+The gap is follow-through. Nobody can easily verify whether safety steps were taken before a job, whether unsafe work was stopped or who is accountable when it was not.
 
-My idea, Saans, is a safety platform that closes this gap. It supports mechanised cleaning first. In the exceptional cases where entry is legally allowed, it records gas readings, location and time, stops work when conditions are unsafe and creates a verified safety record for every job.
+My idea, Saans, is a safety platform that closes this gap. It makes mechanised cleaning the default. In exceptional cases where entry is legally permitted, it records gas readings, stops unsafe work and creates a verified safety record for every job.
 
-My PhD in gas sensors helps me solve the sensor reliability problem. Saans solves the accountability problem.
+India does not need another sensor that remains in a laboratory. It needs a system that helps existing technology protect workers in the field. My PhD in gas sensors helps me build it.
