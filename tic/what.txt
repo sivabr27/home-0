@@ -1,0 +1,5 @@
+Every week in India, a sanitation worker dies inside a sewer or septic tank. Official data shows 498 such deaths between January 2019 and June 2026. Activist groups count more. Most deaths are caused by toxic gases like hydrogen sulphide and methane that a simple sensor can detect.
+
+The problem is not missing rules or missing technology. The law has required gas monitors since 2013. The Supreme Court raised compensation to Rs 30 lakh per death in 2023. The NAMASTE scheme has registered about 90,000 sewer workers. Yet by April 2025 only 354 safety device kits had reached them. Low-cost gas sensors already exist in Indian labs, including a Rs 2,500 prototype built by students in Hyderabad. None of them has reached the manhole at scale.
+
+My idea, Saans, is the missing link. It is a platform that combines a rugged low-cost gas sensor with a simple rule: no safe reading, no entry and no payment to the contractor. Every reading is logged with time and location. Safety stops being an optional cost and becomes the condition for getting paid. India has the law and the science. Saans provides the follow-through.

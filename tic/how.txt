@@ -1,0 +1,23 @@
+Saans works in five steps.
+
+1. Sense. Each sewer crew carries a low-cost sensor that measures methane, hydrogen sulphide and oxygen. My PhD work is on gas sensors, and I know why cheap sensors fail in the field. Sewers are humid, and humidity makes low-cost sensors drift and give false readings. Saans uses humidity compensation and simple daily calibration checks so the readings can be trusted. A sensor that gives false alarms gets ignored. A sensor that misses gas kills. Reliability is the whole point.
+
+2. Permit. Before anyone enters a manhole, the supervisor takes a reading at the opening. The device logs the gas levels with GPS location and time on a mobile app. If levels are unsafe, the app blocks the entry permit and suggests ventilation or mechanical cleaning instead.
+
+3. Pay. This is the key change. The city links contractor payments to the Saans log. A work order is only cleared for payment if a safe reading was recorded before entry. Today a contractor saves money by skipping safety. With Saans, skipping safety means not getting paid. The incentive flips without needing more inspectors.
+
+4. Map. Every reading is stored on a city dashboard. Over time it shows which sewer lines have dangerous gas build-up, which are blocked and where hydrogen sulphide may be corroding concrete pipes. The city gets an underground early-warning map at almost no extra cost.
+
+5. Scale. The plan starts small and grows.
+- Phase 1: Pilot in one city ward with 50 sewer crews for six months. Measure entries logged, unsafe entries blocked and zero deaths.
+- Phase 2: Expand to the full city and link to the NAMASTE worker database so every registered worker is covered.
+- Phase 3: Offer Saans to other cities as a ready system. Add fixed sensors at high-risk manholes for continuous monitoring.
+
+Why this can work now:
+- The legal duty already exists. Saans helps cities prove they follow it.
+- Each death now costs the state Rs 30 lakh in compensation. That money could buy around 66 professional gas detectors. Prevention is cheaper than compensation.
+- The technology is proven in labs. What is missing is manufacturing at scale, a reliable digital platform and a partner with a strong safety culture.
+
+The right partner would be an organisation that can build rugged hardware in large volumes, run city-wide digital platforms and already follows a zero-harm safety culture in its own plants. With that support, Saans can move from a lab prototype to every ward in India.
+
+Success will be measured simply: unsafe entries prevented, workers covered and sewer deaths brought to zero.

@@ -1,0 +1,27 @@
+Saans may look like a small solution for a narrow group. Its impact reaches much further.
+
+1. Sanitation workers
+About 90,000 sewer and septic tank workers are registered under NAMASTE. Many more work informally through contractors and are not counted. Most come from Dalit communities and have little power to refuse dangerous work. Saans gives them one clear protection: no one is sent in until the air is proven safe. It also gives them a record. If something goes wrong, there is proof of whether safety was followed.
+
+2. Their families
+Most sewer workers are the only earners in their homes. When a worker dies, families often move back to their villages and children leave school to start working. Compensation can take months or years. Some families never receive it. One analysis of official records found that 52 families got nothing. Preventing one death protects a whole household and the education of the next generation.
+
+3. Cities and citizens
+Methane and hydrogen sulphide do not only harm workers. In Delhi, sewer gas blasts once blew off around 40 manhole covers and injured 14 people. A sewer gas explosion in Karachi in 2021 killed 10 people. Hydrogen sulphide also corrodes concrete sewer pipes from the inside, which leads to costly repairs and road collapses. The Saans gas map helps cities find these risks early and fix them before they become disasters.
+
+4. City governments
+Cities are legally responsible for these deaths and pay Rs 30 lakh in compensation each time. Saans gives them a simple way to follow the law, reduce this liability and show proof of compliance. It also gives them data to plan sewer cleaning and repairs better.
+
+5. Contractors
+Responsible contractors gain a fair system. They are no longer undercut by those who skip safety, because payment now depends on safety records.
+
+6. The environment
+Methane is a strong greenhouse gas. Mapping where it builds up in sewers is a first step to reducing these emissions.
+
+7. Indian innovation
+Many good sensors developed in Indian labs never reach real use. Saans creates a path from lab to field. Once the platform exists, new and better sensors can plug into it.
+
+Scale of impact
+Phase 1 in one ward can protect around 50 crews. A full city rollout can cover thousands of workers. A national rollout linked to NAMASTE can protect every registered sewer worker in India and their families.
+
+The goal is simple. No worker should die in a sewer because nobody checked the air. The law already says this. Saans makes sure it actually happens.
