@@ -1,0 +1,36 @@
+SAANS: From detection to action
+Voiceover script matched to Saans_final_nosub_v4.mp4 (2:09)
+Pace: about 140 words a minute. [pause] = a short beat.
+
+0:00 - 0:12 | City, cover lift, 498 card, NDTV clipping
+India, 2026. Workers still die cleaning sewers. 498 deaths since 2019, about one every five and a half days. [pause] Not because we lack rules or technology. Because nobody checks that they are followed.
+
+0:12 - 0:32 | My PhD photos, detector, gas cutaway, "The tech exists"
+I did my PhD building gas sensors. This is my cleanroom team, and this is me presenting that work. [pause] Detecting methane, hydrogen sulphide or low oxygen is not rocket science. Students have built such sensors for about 2,500 rupees. But most of them stay in labs.
+
+0:32 - 0:48 | 2013 Act, Supreme Court order, PIB scheme
+The rules exist too. A 2013 law bans hazardous sewer cleaning. The Supreme Court set 30 lakh rupees per death, enough for about 66 detectors. The national scheme has 753 devices for 89,000 workers. [pause] All on paper.
+
+0:48 - 1:01 | The three questions, broken board
+The real gap is follow-through. Was the job done by machine? Was the air checked? Was unsafe work stopped? [pause] Today, nobody can easily prove it.
+
+1:01 - 1:07 | SAANS title, phone checklist
+My idea, Saans, is a safety platform that closes this gap.
+
+1:07 - 1:13 | Mechanisation first, deaths chart (tight, speak briskly)
+Every job starts as a work order, machines first. Deaths are falling, but not stopping. Saans works now, and after full mechanisation.
+
+1:13 - 1:20 | Checklist, gas readings, STOP WORK
+If entry is truly needed, a rugged sensor checks the air. If it is unsafe, work stops.
+
+1:20 - 1:32 | Dashboard, map, compliance panel
+Every step is logged with time and location. Contractors are judged on verified safety, with independent audits to keep records honest.
+
+1:32 - 1:47 | Sewer trace, family, girl studying, SDG tiles
+A manhole may look like a small place for impact. But behind every worker is a family, and under every city the same gases build up silently. [pause] This supports SDG 8, 6 and 11, and gives cities real ESG data.
+
+1:47 - 2:00 | Cost card, Manufacture, Connect, Deploy
+A commercial detector costs 40 to 90 thousand rupees. A lab prototype, under 5,000. Closing that gap needs a partner to manufacture, connect and deploy at city scale, starting with one ward.
+
+2:00 - 2:09 | Sensor network, end card
+India does not need another sensor that stays in a lab. It needs detection that leads to action. [pause] That is Saans.
