@@ -1,0 +1,213 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+:root{--ch:#1C1D1F;--ch2:#2A2C2F;--wh:#F7F5F0;--red:#E0343F;--teal:#19B3A6;--yel:#FFE14D;--mute:#A9A49B;--paper:#F3EFE6}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#111;font-family:Helvetica,"Liberation Sans",Arial,sans-serif;color:var(--wh)}
+.shot{position:absolute;inset:0;overflow:hidden;display:none}
+.ph{position:absolute;inset:0;background-size:cover;background-position:center;transform-origin:50% 50%}
+.dark{position:absolute;inset:0;background:#000;opacity:0}
+.a{position:absolute;opacity:0}
+.k{font-weight:700;letter-spacing:-1px}
+.lt{position:absolute;left:90px;bottom:90px;max-width:1300px;font-size:56px;font-weight:700;line-height:1.25}
+.lt span{background:var(--ch);padding:4px 18px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.ev{background:var(--ch);border-left:8px solid var(--red);padding:22px 28px;color:var(--wh)}
+.lab{font-size:20px;font-weight:700;letter-spacing:3px;text-transform:uppercase}
+.callout{position:absolute;font-size:24px;font-weight:700;background:var(--ch);color:#fff;padding:8px 14px;white-space:nowrap}
+.card{background:#fff;color:#141414;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.serif{font-family:"Liberation Serif",Georgia,serif}
+.hl{background-image:linear-gradient(var(--yel),var(--yel));background-repeat:no-repeat;background-position:0 80%;background-size:0% 75%}
+.phone{width:380px;height:760px;border-radius:56px;background:#0E0F10;padding:18px;box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.scr{background:#fff;border-radius:40px;height:100%;padding:56px 26px;color:#141414;overflow:hidden;position:relative}
+.row{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border:2px solid #E5E1D8;border-radius:12px;margin:10px 0;font-size:21px;font-weight:700}
+.miss{border:3px dashed var(--red);color:var(--red)}
+.ok{color:var(--teal)}
+#ai{position:absolute;left:24px;bottom:16px;font-size:15px;color:rgba(255,255,255,.75);z-index:90;text-shadow:0 1px 3px rgba(0,0,0,.7)}
+#cue{position:absolute;left:160px;right:160px;top:24px;text-align:center;font-size:30px;font-weight:700;background:rgba(0,0,0,.82);padding:12px 22px;border-radius:12px;display:none;color:#fff;z-index:99}#cue.on{display:block}
+</style></head><body><div id="root"></div><div id="ai">Illustrative AI-generated imagery · Proposed system</div><div id="cue"></div>
+<script>
+const C=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));const E=x=>{x=C(x);return 1-Math.pow(1-x,3)};const EIO=x=>{x=C(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2};const L=(a,b,p)=>a+(b-a)*p;
+const root=document.getElementById('root');const shots=[];
+function shot(s,e,html,hook,tr='fade'){const d=document.createElement('div');d.className='shot';d.innerHTML=html;root.appendChild(d);d.querySelectorAll('[data-t]').forEach(x=>x.dataset.t=+x.dataset.t+s);d.querySelectorAll('[data-hl]').forEach(x=>x.dataset.hl=+x.dataset.hl+s);shots.push({el:d,s,e,hook,tr});return d;}
+const A=(t,fx,css,h,ex='')=>`<div class="a" data-t="${t}" data-fx="${fx}" ${ex} style="${css}">${h}</div>`;
+const PH=(img,id)=>`<div class="ph" id="${id}" style="background-image:url(img/${img}.jpg)"></div>`;
+const LT=(t,txt,css='')=>A(t,'up',`left:90px;bottom:90px;width:1500px;${css}`,`<div class="lt" style="position:relative;left:0;bottom:0"><span>${txt}</span></div>`);
+const $=id=>document.getElementById(id);
+// camera helper: zoom s around (x,y) of a 1920x1080 frame
+function cam(el,s,x,y){el.style.transformOrigin=`${x}px ${y}px`;el.style.transform=`scale(${s})`;}
+function hlset(t){document.querySelectorAll('[data-hl]').forEach(e=>e.style.backgroundSize=`${E((t-+e.dataset.hl)/.9)*100}% 75%`);}
+
+/* ===== SCENE 1 (0-12) ===== */
+shot(0,4.4,PH('h1','s1a')+LT(1,'Sanitation workers still die inside India\'s sewers.'),(t,lt)=>{cam($('s1a'),1.05+lt*.05,1062,560);});
+shot(4,12.4,PH('h2','s1b')+`<div class="dark" id="s1d"></div>
+<div id="big" style="position:absolute;left:0;top:250px;width:1920px;text-align:center;opacity:0"><div style="font-size:300px;font-weight:700;letter-spacing:-12px;line-height:1" id="n498">0</div><div style="font-size:40px;font-weight:700;margin-top:10px">deaths while cleaning sewers and septic tanks</div><div style="font-size:26px;color:#ddd;margin-top:10px">January 2019 to June 2026 · Government data reported by NDTV</div></div>
+<div id="evc" class="ev" style="position:absolute;left:60px;top:60px;width:430px;opacity:0"><div class="lab" style="color:var(--red)">Evidence</div><div style="font-size:64px;font-weight:700;line-height:1;margin-top:6px">498</div><div style="font-size:20px;margin-top:6px">sewer &amp; septic tank deaths, Jan 2019 to Jun 2026</div><div style="font-size:16px;color:var(--mute);margin-top:6px">Govt data, reported by NDTV</div></div>
+${LT(6.8,'Not because rules or technology are missing.','bottom:180px')}${LT(7.8,'Because nobody checks they are followed.')}`,(t,lt)=>{
+ // push-in, freeze between 1.5 and 5.5
+ const mv=lt<1.5?lt:(lt<5.5?1.5:1.5+(lt-5.5));cam($('s1b'),1.04+mv*.025,860,620);
+ const dk=C((lt-1.4)/.3)*(1-C((lt-5.4)/.6));$('s1d').style.opacity=.62*dk;
+ const big=$('big');big.style.opacity=C((lt-1.6)/.3)*(1-C((lt-5.2)/.3));big.style.transform=`scale(${1+.04*E((lt-1.6)/3)})`;
+ $('n498').textContent=Math.round(498*E((lt-1.6)/1.6));
+ const ev=$('evc');const p=E((lt-5.2)/.6);ev.style.opacity=p;ev.style.transform=`translate(${(1-p)*700}px,${(1-p)*260}px) scale(${1.6-.6*p})`;
+ // hide lower thirds while stat visible
+ document.querySelectorAll('#s1b ~ .a').forEach(()=>{});
+});
+
+/* ===== SCENE 2 (12-27) ===== */
+shot(12,17.6,`<div id="s2w" style="position:absolute;inset:0">`+PH('h4','s2a')+`<svg style="position:absolute;left:0;top:0" width="1920" height="1080"><rect id="s2box" x="1000" y="515" width="175" height="140" fill="none" stroke="#fff" stroke-width="4" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/><path id="s2l1" d="M1000 560 L640 400" stroke="#fff" stroke-width="3" fill="none" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/><path id="s2l2" d="M1500 520 L1500 290" stroke="#fff" stroke-width="3" fill="none" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></div>
+${A(1.6,'pop','left:240px;top:360px','<div class="callout co">Sensing layer: metal-oxide film</div>')}
+${A(2.4,'pop','left:1330px;top:235px','<div class="callout co">Live gas reading</div>')}
+${A(.4,'left','left:90px;top:80px','<div class="ev" style="border-left-color:var(--teal)"><div class="lab" style="color:var(--teal)">My PhD</div><div style="font-size:40px;font-weight:700;margin-top:4px">Building gas sensors</div></div>')}`,(t,lt)=>{
+ const z=lt<3.8?1.03+lt*.01:1.07+Math.pow(E((lt-3.8)/1.6),2)*3.2;cam($('s2w'),z,1087,585);document.querySelectorAll('.co').forEach(c=>c.style.opacity=1-C((lt-3.6)/.3));
+ $('s2box').style.strokeDashoffset=1-E((lt-.6)/.8);$('s2l1').style.strokeDashoffset=1-E((lt-1.2)/.5);$('s2l2').style.strokeDashoffset=1-E((lt-2)/.5);
+ $('s2a').style.filter=`brightness(${1+C((lt-4.6)/.8)*1.5})`;},'fade');
+// cutaway
+let gas='';for(let i=0;i<34;i++)gas+=`<circle class="gp" data-i="${i}" r="${7+(i%3)*3}" fill="${i%3==0?'#E0343F':(i%3==1?'#FF8A3D':'#9AD14B')}" opacity=".85"/>`;
+shot(17.4,24.4,`<div style="position:absolute;inset:0;background:var(--ch)"></div>
+<svg style="position:absolute;left:0;top:0" width="1920" height="1080">
+<rect x="0" y="0" width="1920" height="300" fill="#3A3D41"/><rect x="0" y="300" width="1920" height="22" fill="#55585D"/>
+<rect x="0" y="322" width="1920" height="758" fill="#2B2620"/>
+<rect x="840" y="300" width="200" height="420" fill="#141210" stroke="#6B635A" stroke-width="6"/>
+<rect x="120" y="700" width="1680" height="220" rx="110" fill="#141210" stroke="#6B635A" stroke-width="8"/>
+<g id="gasg">${gas}</g>
+<line id="cable" x1="940" y1="250" x2="940" y2="250" stroke="#ddd" stroke-width="5"/>
+<g id="det"><rect x="905" y="250" width="70" height="110" rx="12" fill="#F2B705"/><rect x="917" y="265" width="46" height="34" rx="4" fill="#1C1D1F"/></g>
+</svg>
+${A(.4,'up','left:90px;top:60px','<div class="lab" style="color:var(--mute)">Cutaway · beneath the street</div><div class="k" style="font-size:54px;margin-top:6px">Gases you cannot see or reliably smell</div>')}
+${A(2.6,'pop','left:1180px;top:360px','<div class="ev" style="border-left-color:var(--red);width:520px"><div style="display:flex;justify-content:space-between;font-size:30px;font-weight:700"><span>CH₄</span><span id="rch">0% LEL</span></div><div style="display:flex;justify-content:space-between;font-size:30px;font-weight:700;margin-top:8px"><span>H₂S</span><span id="rh2s" style="color:var(--red)">0 ppm</span></div><div style="display:flex;justify-content:space-between;font-size:30px;font-weight:700;margin-top:8px"><span>O₂</span><span id="ro2">20.9%</span></div><div style="font-size:16px;color:var(--mute);margin-top:10px">Illustrative readings</div></div>')}
+${A(1.4,'up','left:150px;top:960px','<div style="font-size:26px;color:#ddd">H₂S dulls the sense of smell at high levels. Low oxygen gives no warning.</div>')}`,(t,lt)=>{
+ document.querySelectorAll('.gp').forEach(c=>{const i=+c.dataset.i;const x=((i*97+lt*90*(1+(i%4)*.25))%1700)+110;const y=760+((i*53)%120)+Math.sin(lt*2+i)*12;c.setAttribute('cx',x);c.setAttribute('cy',y);});
+ const dy=L(250,640,EIO((lt-.6)/1.6));$('cable').setAttribute('y2',dy);$('det').setAttribute('transform',`translate(0,${dy-250})`);
+ const p=E((lt-2.8)/2.5);$('rch').textContent=Math.round(14*p)+'% LEL';$('rh2s').textContent=Math.round(22*p)+' ppm';$('ro2').textContent=(20.9-2.6*p).toFixed(1)+'%';
+ const sh=shots.find(s=>s.s==17.4).el;const pb=EIO((lt-6.2)/.8);sh.style.transform+=` scale(${1-pb*.3})`;},'flash');
+shot(24.2,27.4,`<div style="position:absolute;inset:0;background:var(--ch)"></div>
+<div class="a" data-t=".1" data-fx="left" style="left:120px;top:250px;width:640px"><div style="height:400px;background:url(img/h4.jpg) center/cover;border:6px solid #fff"></div><div class="lab" style="margin-top:14px;color:var(--teal)">The lab · sensor works</div></div>
+<div class="a" data-t=".3" data-fx="right" style="left:1160px;top:250px;width:640px"><div style="height:400px;background:url(img/h3.jpg) center/cover;border:6px solid #fff"></div><div class="lab" style="margin-top:14px;color:var(--red)">The worksite · no sensor</div></div>
+<svg style="position:absolute;left:0;top:0" width="1920" height="1080"><path id="brk" d="M770 450 L1150 450" stroke="#fff" stroke-width="5" stroke-dasharray="18 14" fill="none"/></svg>
+${A(1,'pop','left:900px;top:395px','<div style="width:110px;height:110px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;font-size:70px;font-weight:700">✕</div>')}
+${A(.8,'up','left:120px;top:90px','<div class="k" style="font-size:54px">A ₹2,500 student prototype exists. It stays in the lab.</div><div style="font-size:20px;color:var(--mute);margin-top:8px">Osmania University students, Hyderabad · ETV Bharat, Feb 2025</div>')}`,null,'zoomout');
+
+/* ===== SCENE 3 (27-43) documents ===== */
+const docPara=(txt)=>`<p class="serif" style="font-size:30px;line-height:1.5;margin:0 0 26px">${txt}</p>`;
+shot(27.2,35,`<div style="position:absolute;inset:0;background:#2A2724"></div>
+<div id="doc" class="card" style="position:absolute;left:330px;top:80px;width:1000px;padding:70px 80px;transform-origin:50% 0">
+<div class="lab" style="color:#6B665E">Supreme Court of India · 20 October 2023</div>
+<div class="serif" style="font-size:44px;font-weight:700;margin:14px 0 30px">Dr Balram Singh v. Union of India</div>
+<div class="lab" style="color:#6B665E;margin-bottom:16px">Summary of key directions</div>
+${docPara('1. The Union and States must take steps towards the <span class="hl" data-hl="5.2">phased eradication of manual sewer cleaning</span>.')}
+${docPara('2. Contracted sewer work must not require workers to enter sewers.')}
+${docPara('3. <span class="hl" data-hl="7.4">Compensation for a sewer death raised to ₹30 lakh</span>, payable by the responsible authority.')}
+${docPara('4. Rehabilitation, scholarships and skill training for affected families.')}
+<div style="font-size:18px;color:#6B665E">Paraphrased summary for illustration</div></div>
+${A(.6,'right','left:1420px;top:140px','<div class="ev"><div class="lab" style="color:var(--yel)">The law · 2013</div><div style="font-size:24px;margin-top:6px;width:360px">Manual Scavengers Act &amp; Rules prescribe safety requirements for sewer work.</div></div>')}`,(t,lt)=>{
+ const d=$('doc');const enter=E(lt/.8);const scroll=EIO((lt-2.8)/2.2)*-330;const out=EIO((lt-6.9)/.9);d.style.transform=`translate(${(1-enter)*900-out*1100}px,${scroll}px) rotate(${(1-enter)*4}deg) scale(${1+EIO((lt-2.8)/2.2)*.12})`;},'push');
+shot(34.6,43.2,`<div style="position:absolute;inset:0;background:#2A2724" id="s3bg"></div><div class="ph" id="s3ws" style="background-image:url(img/h3.jpg);opacity:0"></div>
+<div id="web" class="card" style="position:absolute;left:300px;top:90px;width:1100px;border-radius:14px;overflow:hidden">
+<div style="background:#E9E6DF;padding:14px 20px;display:flex;gap:10px;align-items:center"><span style="width:14px;height:14px;border-radius:50%;background:#E0343F"></span><span style="width:14px;height:14px;border-radius:50%;background:#F2B705"></span><span style="width:14px;height:14px;border-radius:50%;background:#2F8A57"></span><span style="margin-left:20px;background:#fff;padding:6px 18px;border-radius:8px;font-size:18px;color:#6B665E">socialjustice.gov.in · NAMASTE</span></div>
+<div style="padding:46px 56px"><div class="lab" style="color:#6B665E">Ministry of Social Justice &amp; Empowerment</div><div style="font-size:42px;font-weight:700;margin:12px 0 26px">NAMASTE: National Action for Mechanised Sanitation Ecosystem</div>
+<div style="font-size:28px;line-height:1.7">✓ Occupational safety training<br>✓ PPE kits for sewer workers<br>✓ Safety devices for emergency response units<br>✓ <span class="hl" data-hl="2.6"><b>90,186</b> workers validated (Sept 2026)</span></div><div style="font-size:17px;color:#6B665E;margin-top:16px">Recreated for illustration from official releases</div></div></div>
+<div id="pol" style="position:absolute;left:1280px;top:470px;width:470px;background:#fff;padding:14px;box-shadow:0 20px 50px rgba(0,0,0,.4);transform:rotate(4deg);opacity:0"><div style="height:300px;background:url(img/h6.jpg) 60% 60%/cover"></div><div style="color:#141414;font-size:18px;font-weight:700;margin-top:8px">Safety equipment exists</div></div>
+<div id="labs" style="position:absolute;left:0;bottom:70px;width:1920px;display:flex;justify-content:center;gap:30px">${['Law','Court directions','Existing scheme'].map((x,i)=>`<div class="lb" data-i="${i}" style="background:var(--ch);padding:16px 30px;font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;border-bottom:6px solid var(--yel);opacity:0">${x}</div>`).join('')}</div>
+${A(6.6,'pop','left:0;top:430px;width:1920px;text-align:center','<span style="background:var(--red);font-size:64px;font-weight:700;padding:10px 30px">All on paper.</span>')}`,(t,lt)=>{
+ const w=$('web');const en=E(lt/.8);const col=EIO((lt-5.2)/1.2);w.style.transform=`translate(${(1-en)*1200 - col*120}px,${col*120}px) scale(${1-col*.55}) rotate(${-col*3}deg)`;w.style.opacity=1-C((lt-7.2)/.6);
+ const po=$('pol');po.style.opacity=C((lt-1.6)/.4)*(1-C((lt-7.2)/.6));po.style.transform=`rotate(${4-col*8}deg) translate(${-col*700}px,${-col*80}px) scale(${1-col*.5})`;
+ document.querySelectorAll('.lb').forEach(b=>{const i=+b.dataset.i;const p=E((lt-3.4-i*.35)/.5);b.style.opacity=p*(1-C((lt-7.2)/.6));b.style.transform=`translateY(${(1-p)*40}px)`});
+ $('s3ws').style.opacity=C((lt-7)/.8);$('s3ws').style.transform=`scale(${1.15-C((lt-7)/1.2)*.1})`;},'push');
+
+/* ===== SCENE 4 (43-56) the gap ===== */
+const Q=(txt)=>`<span style="background:var(--ch);font-size:44px;font-weight:700;padding:8px 20px;border-left:8px solid var(--red)">${txt}</span>`;
+shot(43,46,PH('h5','q1')+A(.5,'left','left:90px;top:120px',Q('Was the job done by machine?')),(t,lt)=>cam($('q1'),1.04+Math.min(lt,1.2)*.04,1000,700),'push');
+shot(45.8,48.8,PH('h6','q2')+`<svg style="position:absolute;left:0;top:0" width="1920" height="1080"><rect x="940" y="640" width="140" height="190" fill="none" stroke="#fff" stroke-width="4"/></svg>`+A(.5,'left','left:90px;top:120px',Q('Was the air checked?')),(t,lt)=>cam($('q2'),1.04+Math.min(lt,1.2)*.04,1000,730),'push');
+shot(48.6,51.4,`<div style="position:absolute;inset:0;background:#2A2724"></div><div style="position:absolute;left:770px;top:150px" class="phone"><div class="scr"><div class="lab" style="color:#6B665E;font-size:16px">Supervisor's phone</div><div style="font-size:26px;font-weight:700;margin:10px 0 18px">Today's jobs</div><div class="row">Ward 12 · Sewer line<span style="color:#A9A49B">?</span></div><div class="row">Ward 7 · Septic tank<span style="color:#A9A49B">?</span></div><div class="row">Ward 3 · Manhole<span style="color:#A9A49B">?</span></div></div></div>`+A(.5,'left','left:90px;top:120px',Q('Was unsafe work stopped?')),null,'push');
+shot(51.2,56.4,`<div style="position:absolute;inset:0;background:#2A2724"></div>
+<div id="thumbs">${['h5','h6'].map((h,i)=>`<div class="th" data-i="${i}" style="position:absolute;width:300px;height:190px;background:url(img/${h}.jpg) center/cover;border:5px solid #fff;top:120px;left:${300+i*520}px"></div>`).join('')}<div class="th" data-i="2" style="position:absolute;width:300px;height:190px;background:#0E0F10;border:5px solid #fff;top:120px;left:1340px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:22px">Phone</div></div>
+<svg style="position:absolute;left:0;top:0" width="1920" height="1080"><path id="cl" d="M450 310 L450 400 L1490 400 L1490 310 M970 310 L970 470" stroke="#fff" stroke-width="4" fill="none" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg>
+<div id="wo" class="card" style="position:absolute;left:560px;top:470px;width:820px;padding:30px 36px;border-radius:14px"><div class="lab" style="color:#6B665E">Work order · Job #4521 · Ward 12</div>
+${['Cleaning method','Gas check','Unsafe work stopped?'].map((x,i)=>`<div class="row miss frag" data-i="${i}">${x}<span>— missing —</span></div>`).join('')}</div>
+<div id="allq" style="position:absolute;left:0;top:450px;width:1920px;text-align:center;opacity:0;line-height:2.1">${Q('Machine?')} ${Q('Air checked?')} ${Q('Work stopped?')}<br><span style="font-size:52px;font-weight:700;background:var(--red);padding:8px 26px">Nobody can easily prove it.</span></div>`,(t,lt)=>{
+ $('cl').style.strokeDashoffset=1-E((lt-.3)/.8);const wo=$('wo');const z=EIO((lt-1.4)/1)*.25;const br=EIO((lt-2.8)/.8);
+ wo.style.opacity=C(lt/.4)*(1-C((lt-3.4)/.4));wo.style.transform=`scale(${1+z})`;
+ document.querySelectorAll('.frag').forEach(f=>{const i=+f.dataset.i;f.style.transform=`translate(${br*(i-1)*420}px,${br*(i*90-60)}px) rotate(${br*(i-1)*14}deg)`});
+ document.querySelectorAll('.th').forEach(th=>th.style.opacity=1-C((lt-3)/.5));$('cl').style.opacity=1-C((lt-3)/.5);
+ $('allq').style.opacity=C((lt-3.4)/.4);},'push');
+
+/* ===== SCENE 5 (56-73) Saans step by step ===== */
+const phoneSaans=(inner)=>`<div class="phone"><div class="scr"><div style="display:flex;align-items:center;gap:10px"><span style="width:16px;height:16px;border-radius:50%;background:var(--teal)"></span><b style="letter-spacing:4px">SAANS</b></div>${inner}</div></div>`;
+shot(56.2,60.8,`<div style="position:absolute;inset:0;background:#2A2724"></div>
+${['Cleaning method','Gas check','Unsafe work stopped?'].map((x,i)=>`<div class="pc" data-i="${i}" style="position:absolute;left:770px;top:${330+i*90}px;width:380px"><div class="row" style="background:#fff;color:#141414;border-color:var(--teal)">${x}</div></div>`).join('')}
+<div id="sp" style="position:absolute;left:770px;top:150px;opacity:0">${phoneSaans(`<div style="font-size:26px;font-weight:700;margin:22px 0 6px">New work order</div><div id="typ" style="font-size:20px;color:#6B665E;height:30px"></div><div class="row" style="margin-top:18px">Mechanised cleaning<span id="mtog" style="width:58px;height:32px;border-radius:16px;background:#ddd;position:relative"><i id="knob" style="position:absolute;top:3px;left:3px;width:26px;height:26px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.4)"></i></span></div><div class="row" style="color:#A9A49B">Human entry · exception only</div>`)}</div>
+${A(.2,'up','left:90px;top:90px','<div class="lab" style="color:var(--teal)">The idea</div><div class="k" style="font-size:72px;margin-top:6px">SAANS</div><div style="font-size:30px;margin-top:6px;width:560px">A safety platform that closes the gap.</div>')}`,(t,lt)=>{
+ const sn=EIO((lt-.3)/1.1);document.querySelectorAll('.pc').forEach(p=>{const i=+p.dataset.i;p.style.transform=`translate(${(1-sn)*(i-1)*420}px,${(1-sn)*(i*90-60)+sn*(150-i*30)}px) rotate(${(1-sn)*(i-1)*14}deg) scale(${1-sn*.3})`;p.style.opacity=1-C((lt-1.4)/.3)});
+ $('sp').style.opacity=C((lt-1.3)/.4);const txt='Job #4521 · Ward 12 · Sewer line';$('typ').textContent=txt.slice(0,Math.floor(C((lt-1.8)/1.2)*txt.length));
+ const on=C((lt-3.2)/.3);$('mtog').style.background=on>.5?'var(--teal)':'#ddd';$('knob').style.left=(3+on*26)+'px';},'push');
+shot(60.6,64.4,PH('h5','s5t')+`<div class="a" data-t=".3" data-fx="right" style="right:90px;top:120px;transform-origin:100% 0">${phoneSaans(`<div style="font-size:24px;font-weight:700;margin:22px 0 10px">Job #4521</div><div class="row" style="border-color:var(--teal)">Mechanised cleaning<span class="ok">✓ in progress</span></div><div class="row">Human entry<span style="color:#A9A49B">not needed</span></div>`)}</div>`+A(.6,'up','left:90px;bottom:90px','<span style="background:var(--teal);font-size:72px;font-weight:700;padding:8px 26px">MECHANISATION FIRST</span>'),(t,lt)=>{cam($('s5t'),1.04+lt*.02,900,800);const ph=document.querySelector('.shot:nth-child(17) .phone');},'push');
+shot(64.2,66.8,`<div style="position:absolute;inset:0;background:#2A2724"></div><div style="position:absolute;left:770px;top:150px">${phoneSaans(`<div style="font-size:24px;font-weight:700;margin:22px 0 4px">Exceptional entry</div><div style="font-size:17px;color:#6B665E">Legally permitted cases only</div>${['Officer authorisation','Ventilation','PPE &amp; harness','Rescue team on site','Gas check'].map((x,i)=>`<div class="row ck" data-i="${i}">${x}<span class="ckm" style="opacity:0;color:var(--teal)">✓</span></div>`).join('')}`)}</div>`,(t,lt)=>{document.querySelectorAll('.ckm').forEach((c,i)=>c.style.opacity=i<4?C((lt-.4-i*.4)/.2):0);},'push');
+// detector photo -> reading -> stop work
+shot(66.6,70.6,PH('h6','s5d')+`<svg style="position:absolute;left:0;top:0" width="1920" height="1080"><rect id="dbox" x="940" y="640" width="140" height="190" fill="none" stroke="var(--teal)" stroke-width="5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/><path id="dl" d="M1080 700 L1300 520" stroke="var(--teal)" stroke-width="4" fill="none" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg>
+<div id="rd" style="position:absolute;left:1300px;top:250px;width:520px;opacity:0;transform-origin:0 100%"><div class="ev" style="border-left-color:var(--teal)" id="rdb"><div class="lab" style="color:var(--teal)" id="rdt">Live reading · surface check</div>${['CH₄','H₂S','O₂'].map((g,i)=>`<div style="display:flex;align-items:center;gap:14px;margin-top:12px"><b style="width:60px;font-size:26px">${g}</b><div style="flex:1;height:20px;background:#3A3D41"><div id="b${i}" style="height:100%;width:10%;background:var(--teal)"></div></div></div>`).join('')}<div style="font-size:15px;color:var(--mute);margin-top:10px">Illustrative thresholds</div></div></div>`,(t,lt)=>{
+ cam($('s5d'),1.04+lt*.03,1010,735);$('dbox').style.strokeDashoffset=1-E((lt-.2)/.6);$('dl').style.strokeDashoffset=1-E((lt-.7)/.4);
+ const r=$('rd');r.style.opacity=C((lt-.9)/.3);r.style.transform=`scale(${.6+.4*E((lt-.9)/.5)})`;
+ const p=[.3*E((lt-1.2)/1),E((lt-1.4)/1.6),.15];p.forEach((v,i)=>{const b=$('b'+i);b.style.width=(10+85*v)+'%';b.style.background=(i==1&&v>.7)?'var(--red)':'var(--teal)'});
+ const bad=p[1]>.7;$('rdb').style.borderLeftColor=bad?'var(--red)':'var(--teal)';$('rdt').textContent=bad?'H₂S above safe limit':'Live reading · surface check';$('rdt').style.color=bad?'var(--red)':'var(--teal)';},'push');
+shot(70.4,73.2,`<div style="position:absolute;inset:0;background:var(--red)" id="sw"></div><div style="position:absolute;left:0;top:250px;width:1920px;text-align:center"><div style="font-size:230px;font-weight:700;letter-spacing:10px;line-height:1" id="swt">STOP WORK</div></div>
+<svg style="position:absolute;left:0;top:0" width="1920" height="1080"><path id="al" d="M960 560 C960 700 400 700 380 820" stroke="#fff" stroke-width="5" fill="none" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg>
+${A(.9,'pop','left:200px;top:800px','<div style="background:#fff;color:#141414;padding:18px 26px;font-size:26px;font-weight:700">📱 Alert → Supervisor &amp; Ward officer</div>')}
+${A(1.5,'pop','left:820px;top:800px','<div style="background:#fff;color:#141414;padding:18px 26px;font-size:26px;font-weight:700">Corrective action: ventilate · re-test · log</div>')}`,(t,lt)=>{$('swt').style.transform=`scale(${1.4-.4*E(lt/.35)})`;$('al').style.strokeDashoffset=1-E((lt-.6)/.5);},'cut');
+
+/* ===== SCENE 6 (73-87) dashboard + map ===== */
+let dots='';const pts=[];for(let i=0;i<60;i++){const x=260+((i*137)%1400),y=230+((i*89)%640);pts.push([x,y]);dots+=`<g class="dt" data-i="${i}" style="opacity:0"><circle cx="${x}" cy="${y}" r="9" fill="${[7,19,33,48].includes(i)?'#E0343F':'#19B3A6'}"/>${[7,19,33,48].includes(i)?`<circle class="rg" cx="${x}" cy="${y}" r="20" fill="none" stroke="#E0343F" stroke-width="3"/>`:''}</g>`;}
+shot(73,79,`<div class="ph" id="s6o" style="background-image:url(img/h7.jpg);filter:brightness(.55)"></div>
+<svg style="position:absolute;left:0;top:0" width="1920" height="1080"><path id="dl6" d="M-40 900 C500 900 700 300 1080 300" stroke="var(--teal)" stroke-width="5" fill="none" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg>
+<div id="dash" class="card" style="position:absolute;left:1000px;top:180px;width:820px;border-radius:14px;padding:26px 30px;opacity:0"><div class="lab" style="color:#6B665E">City dashboard · Ward 12</div>
+${[['Job','#4521 · Sewer line'],['Reading','H₂S above limit'],['Time · Place','11:42 · GPS logged'],['Action','Work stopped · ventilated · re-tested ✓']].map(([a,b],i)=>`<div class="row dr" data-i="${i}" style="opacity:0"><span style="color:#6B665E">${a}</span><span>${b}</span></div>`).join('')}<div style="font-size:15px;color:#6B665E;margin-top:8px">Proposed Saans interface</div></div>
+${A(.4,'left','left:90px;top:90px','<div class="lab" style="color:var(--teal)">Every step logged</div><div class="k" style="font-size:52px;margin-top:6px;width:760px">Time. Location. Reading. Action.</div>')}`,(t,lt)=>{cam($('s6o'),1.04+lt*.01,960,540);$('dl6').style.strokeDashoffset=1-E((lt-.2)/1);$('dash').style.opacity=C((lt-1)/.4);document.querySelectorAll('.dr').forEach(r=>r.style.opacity=C((lt-1.4-(+r.dataset.i)*.45)/.3));
+ const z=EIO((lt-4.6)/1.2);$('dash').style.transform=`scale(${1-z*.9}) translate(${-z*300}px,${z*200}px)`;},'push');
+shot(78.6,87.2,`<div style="position:absolute;inset:0;background:#24262A"></div>
+<svg id="map" style="position:absolute;left:0;top:0" width="1920" height="1080"><path d="M0 820 C400 760 600 900 1000 840 C1400 780 1600 900 1920 860 L1920 1080 L0 1080Z" fill="#1B3A44"/>
+${[...Array(14)].map((_,i)=>`<line x1="${140+i*125}" y1="160" x2="${100+i*130}" y2="900" stroke="#3A3D41" stroke-width="${i%4?3:7}"/>`).join('')}${[...Array(8)].map((_,i)=>`<line x1="100" y1="${180+i*95}" x2="1820" y2="${170+i*97}" stroke="#3A3D41" stroke-width="${i%3?3:7}"/>`).join('')}${dots}
+<line id="sel" x1="0" y1="0" x2="0" y2="0" stroke="#fff" stroke-width="3"/></svg>
+${A(.3,'up','left:90px;top:40px','<div class="lab" style="color:var(--teal)">One job becomes a city-wide picture</div>')}
+<div id="cnt" style="position:absolute;left:90px;top:80px;font-size:48px;font-weight:700"></div>
+<div id="hist" class="card" style="position:absolute;left:1180px;top:420px;width:640px;padding:24px 28px;border-radius:12px;opacity:0"><div class="lab" style="color:var(--red)">Flagged for inspection · recurring risk</div><div style="font-size:24px;font-weight:700;margin:10px 0">Manhole W12-0417 · work history</div>${['12 Jul · H₂S high · stopped ✓','03 Aug · H₂S high · stopped ✓','21 Sep · H₂S high · stopped ✓'].map(x=>`<div class="row" style="font-size:19px">${x}</div>`).join('')}</div>`,(t,lt)=>{
+ const n=lt<1.2?1:(lt<2.4?5:Math.min(60,5+Math.floor((lt-2.4)*30)));document.querySelectorAll('.dt').forEach(d=>{const i=+d.dataset.i;d.style.opacity=i<n?1:0});
+ document.querySelectorAll('.rg').forEach(r=>{r.setAttribute('r',16+6*Math.sin(t*5))});$('cnt').textContent=n===1?'1 job':(n+' jobs logged');
+ const zs=1.6-.6*EIO(lt/3);document.getElementById('map').style.transform=`scale(${zs})`;document.getElementById('map').style.transformOrigin='960px 540px';
+ const p=pts[19];const sp=E((lt-5.2)/.6);const sel=$('sel');sel.setAttribute('x1',p[0]);sel.setAttribute('y1',p[1]);sel.setAttribute('x2',L(p[0],1180,sp));sel.setAttribute('y2',L(p[1],470,sp));$('hist').style.opacity=C((lt-5.7)/.4);},'zoomout');
+
+/* ===== SCENE 7 (87-102) human impact ===== */
+shot(87,91.6,PH('h1','s7a')+`<svg style="position:absolute;left:0;top:0" width="1920" height="1080"><path id="sew" d="M1062 470 C1070 650 1090 850 1120 1090" stroke="var(--teal)" stroke-width="7" stroke-dasharray="20 14" fill="none"/><path id="sewm" d="M1062 470 C1070 650 1090 850 1120 1090" stroke="#111" stroke-width="9" fill="none" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0"/></svg>
+${A(.6,'pop','left:1150px;top:700px','<div class="callout" style="background:var(--teal);color:#0E0F10">Sewer line beneath the road</div>')}`+LT(1.4,'A manhole looks like a small place for impact.'),(t,lt)=>{cam($('s7a'),1.15-lt*.02,1062,600);$('sewm').style.strokeDashoffset=-E((lt-.2)/1.2);$('sewm').style.opacity=1-C((lt-1.4)/.1);},'zoomout');
+shot(91.4,97.4,PH('h8','s7b')+`<svg style="position:absolute;left:0;top:0" width="1920" height="1080"><g stroke="#fff" stroke-width="3" fill="none"><path class="ln7" d="M520 330 L250 170" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/><path class="ln7" d="M520 330 L250 470" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/><path class="ln7" d="M520 330 L250 770" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></g><circle cx="520" cy="330" r="12" fill="#fff"/></svg>
+${A(1.4,'left','left:60px;top:140px','<div class="callout">Household income</div>')}${A(2,'left','left:60px;top:440px','<div class="callout">Children\'s education</div>')}${A(2.6,'left','left:60px;top:740px','<div class="callout">The wider community</div>')}`+LT(.6,'Behind every worker is a family.','left:auto;right:90px;width:auto'),(t,lt)=>{cam($('s7b'),1.04+lt*.015,900,450);document.querySelectorAll('.ln7').forEach((l,i)=>l.style.strokeDashoffset=1-E((lt-1-i*.6)/.5));},'fade');
+let nb='';const hoods=[[300,300],[760,220],[1260,320],[1600,600],[1000,700],[480,720]];hoods.forEach(([x,y],i)=>nb+=`<g class="hd" data-i="${i}"><rect x="${x-110}" y="${y-70}" width="220" height="140" rx="10" fill="#2E3136" stroke="#55585D" stroke-width="3"/>${[0,1,2].map(k=>`<rect x="${x-90+k*65}" y="${y-50}" width="50" height="60" fill="#3A3D41"/>`).join('')}</g>`);
+let sl='';for(let i=0;i<hoods.length;i++){const a=hoods[i],b=hoods[(i+1)%hoods.length];sl+=`<path class="sl" d="M${a[0]} ${a[1]+70} Q${(a[0]+b[0])/2} ${Math.max(a[1],b[1])+180} ${b[0]} ${b[1]+70}" stroke="var(--teal)" stroke-width="6" fill="none" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>`;}
+shot(97.2,102.4,`<div style="position:absolute;inset:0;background:#24262A"></div><svg style="position:absolute;left:0;top:0" width="1920" height="1080">${sl}${nb}</svg>`+A(.3,'up','left:90px;top:60px','<div class="k" style="font-size:52px">Under every city, the same gases build up silently.</div><div style="font-size:26px;color:var(--mute);margin-top:8px">One network. Many neighbourhoods.</div>'),(t,lt)=>{document.querySelectorAll('.sl').forEach((s,i)=>s.style.strokeDashoffset=1-E((lt-.6-i*.35)/.7));document.querySelectorAll('.hd').forEach((h,i)=>h.style.opacity=.4+.6*C((lt-.6-i*.35)/.5));},'fade');
+
+/* ===== SCENE 8 (102-120) close the loop ===== */
+const mont=(img,word,sub,extra='')=>PH(img,'m'+word)+`<div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.65),rgba(0,0,0,0) 60%)"></div><div style="position:absolute;left:90px;top:380px"><div style="font-size:140px;font-weight:700;letter-spacing:4px;line-height:1">${word}</div><div style="font-size:34px;margin-top:10px">${sub}</div></div>${extra}
+<div style="position:absolute;left:90px;bottom:80px;display:flex;gap:16px;font-size:26px;font-weight:700;letter-spacing:3px">${['BUILD','CONNECT','DEPLOY'].map(w=>`<span style="padding:8px 18px;background:${w===word?'var(--teal)':'rgba(0,0,0,.6)'};color:${w===word?'#0E0F10':'#fff'}">${w}</span>`).join('<span style="align-self:center">→</span>')}</div>`;
+shot(102,104.8,mont('h4','BUILD','Rugged sensors, calibrated at scale',`<div style="position:absolute;right:120px;top:300px;width:420px" class="ev" ><div class="lab" style="color:var(--teal)">Calibration</div><div style="height:20px;background:#3A3D41;margin-top:14px"><div id="calb" style="height:100%;width:0;background:var(--teal)"></div></div></div>`),(t,lt)=>{cam($('mBUILD'),1.08-lt*.02,800,540);$('calb').style.width=E(lt/2)*100+'%';},'push');
+shot(104.6,107.4,mont('h7','CONNECT','A city-level digital platform'),(t,lt)=>cam($('mCONNECT'),1.04+lt*.02,1100,540),'push');
+shot(107.2,110.2,mont('h6','DEPLOY','In the field, with municipal authorities'),(t,lt)=>cam($('mDEPLOY'),1.04+lt*.02,1000,600),'push');
+const node=(x,y,lbl,col)=>`<g class="nd"><circle cx="${x}" cy="${y}" r="70" fill="#2E3136" stroke="${col}" stroke-width="6"/><text x="${x}" y="${y+120}" text-anchor="middle" fill="#fff" font-size="28" font-weight="700" font-family="Liberation Sans">${lbl}</text></g>`;
+shot(110,120.4,`<div style="position:absolute;inset:0;background:var(--ch)"></div>
+<div id="sys" style="position:absolute;inset:0;transform-origin:960px 470px">
+<svg style="position:absolute;left:0;top:0" width="1920" height="1080"><g stroke="var(--teal)" stroke-width="6" fill="none">${[[610,430],[960,430],[1310,430]].map(([x,y],i)=>`<path class="sy" d="M${i==0?320:[610,960,1310][i-1]+70} 430 L${x-70} 430" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>`).join('')}<path class="sy" d="M1380 430 L1590 430" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></g>
+<clipPath id="cp"><circle cx="250" cy="430" r="70"/></clipPath><image href="img/h4.jpg" x="40" y="290" width="420" height="280" clip-path="url(#cp)" preserveAspectRatio="xMidYMid slice"/><circle cx="250" cy="430" r="70" fill="none" stroke="#fff" stroke-width="6"/><text x="250" y="550" text-anchor="middle" fill="#fff" font-size="28" font-weight="700" font-family="Liberation Sans">The sensor</text>
+${node(610,430,'Work order','#19B3A6')}${node(960,430,'Safety alert','#E0343F')}${node(1310,430,'Action logged','#19B3A6')}${node(1660,430,'City map','#19B3A6')}</svg></div>
+<div id="c1" style="position:absolute;left:0;top:700px;width:1920px;text-align:center;font-size:54px;font-weight:700;opacity:0">India does not need another sensor that stays in a lab.</div>
+<div id="fin" style="position:absolute;left:0;top:0;width:1920px;height:1080px;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0"><div style="font-size:200px;font-weight:700;letter-spacing:30px">SAANS</div><div style="font-size:48px;font-weight:700;color:var(--teal);margin-top:10px">From detection to action.</div></div>`,(t,lt)=>{
+ document.querySelectorAll('.sy').forEach((s,i)=>s.style.strokeDashoffset=1-E((lt-.4-i*.6)/.5));document.querySelectorAll('.nd').forEach((n,i)=>n.style.opacity=C((lt-.7-i*.6)/.3));
+ $('c1').style.opacity=C((lt-3.4)/.4)*(1-C((lt-6.6)/.4));const pb=EIO((lt-3.6)/2.4);$('sys').style.transform=`scale(${1-pb*.35}) translateY(${-pb*60}px)`;$('sys').style.opacity=1-C((lt-6.6)/.5);
+ $('fin').style.opacity=C((lt-7)/.6);},'zoomout');
+
+// ---------- engine ----------
+function fx(el,p,f){const e=E(p);let tr='';if(f==='up')tr=`translateY(${(1-e)*40}px)`;else if(f==='left')tr=`translateX(${(1-e)*-90}px)`;else if(f==='right')tr=`translateX(${(1-e)*90}px)`;else if(f==='pop'){const b=p<1?1+.08*Math.sin(p*Math.PI):1;tr=`scale(${(.7+.3*e)*b})`}el.style.opacity=e;el.style.transform=tr;}
+const DUR=120.4;
+window.render=function(t){shots.forEach((sh,i)=>{const vis=t>=sh.s&&t<sh.e;sh.el.style.display=vis?'block':'none';if(!vis)return;sh.el.style.zIndex=i;
+ const T=.45,pin=EIO((t-sh.s)/T);let tr='',op=1;
+ if(i>0){if(sh.tr==='push')tr=`translateX(${(1-pin)*100}%)`;else if(sh.tr==='fade')op=pin;else if(sh.tr==='zoomout'){op=pin;tr=`scale(${1.12-.12*pin})`}else if(sh.tr==='flash'){op=pin;}}
+ sh.el.style.transform=tr;sh.el.style.opacity=op;sh.el.style.filter='none';
+ sh.el.querySelectorAll('.a').forEach(el=>fx(el,C((t-+el.dataset.t)/.55),el.dataset.fx));
+ if(sh.hook)sh.hook(t,t-sh.s);});hlset(t);};
+window.DUR=DUR;render(0);
+</script></body></html>
