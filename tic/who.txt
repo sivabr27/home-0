@@ -1,27 +1,27 @@
-Saans may look like a small solution for a narrow group. Its impact reaches much further.
+A manhole looks like a small place to create impact. But one unsafe job can affect a worker, a family and a whole neighbourhood.
 
 1. Sanitation workers
-About 90,000 sewer and septic tank workers are registered under NAMASTE. Many more work informally through contractors and are not counted. Most come from Dalit communities and have little power to refuse dangerous work. Saans gives them one clear protection: no one is sent in until the air is proven safe. It also gives them a record. If something goes wrong, there is proof of whether safety was followed.
+About 90,000 sewer and septic tank workers have been profiled under NAMASTE as of April 2026. Many more work informally through contractors. Most come from marginalised communities and have little power to refuse unsafe work. Saans pushes jobs towards machines and makes sure no one goes in without verified safety checks. It also gives workers a record they can rely on if something goes wrong.
 
 2. Their families
-Most sewer workers are the only earners in their homes. When a worker dies, families often move back to their villages and children leave school to start working. Compensation can take months or years. Some families never receive it. One analysis of official records found that 52 families got nothing. Preventing one death protects a whole household and the education of the next generation.
+Most of these workers are their family's main earner. Reports of past deaths show families moving back to villages and children leaving school to work. Compensation can take months or years and some families never receive it. Preventing one death protects a whole household.
 
-3. Cities and citizens
-Methane and hydrogen sulphide do not only harm workers. In Delhi, sewer gas blasts once blew off around 40 manhole covers and injured 14 people. A sewer gas explosion in Karachi in 2021 killed 10 people. Hydrogen sulphide also corrodes concrete sewer pipes from the inside, which leads to costly repairs and road collapses. The Saans gas map helps cities find these risks early and fix them before they become disasters.
+3. Cities and residents
+The same gases that harm workers can build up in sewer networks. In 1995, sewer gas blasts in Delhi blew off about 40 manhole covers and injured 14 people. Hydrogen sulphide also corrodes concrete sewer pipes. The Saans risk map helps cities find recurring problem spots and fix them early.
 
 4. City governments
-Cities are legally responsible for these deaths and pay Rs 30 lakh in compensation each time. Saans gives them a simple way to follow the law, reduce this liability and show proof of compliance. It also gives them data to plan sewer cleaning and repairs better.
+Cities are responsible for these deaths and the Rs 30 lakh compensation. Saans gives officials a way to check that contractors follow the rules, spot repeat violations and show proof of compliance. It also shows where mechanisation is most needed.
 
 5. Contractors
-Responsible contractors gain a fair system. They are no longer undercut by those who skip safety, because payment now depends on safety records.
+Responsible contractors can prove their safety record. They are no longer undercut by those who cut corners, because performance is judged on verified compliance.
 
-6. Indian innovation
-Many good sensors developed in Indian labs never reach real use. Saans creates a path from lab to field. Once the platform exists, new and better sensors can plug into it.
+6. Indian research
+Low-cost sensors built in Indian labs often stay there. Saans creates a path from prototype to field testing, manufacturing and maintenance. Better sensors can plug into the platform over time.
 
 7. ESG and the SDGs
-Saans supports SDG 8.8 (safe working conditions), SDG 6 (safe sanitation), SDG 3.9 (fewer deaths from hazardous gases), SDG 10 (reducing inequality) and SDG 13 (climate, since methane is a strong greenhouse gas). It covers all three ESG pillars: worker safety (Social), methane tracking (Environmental) and an auditable safety record for contractors (Governance). Sanitation and preventive health are eligible CSR activities in India, so companies can fund Saans pilots through CSR.
+Saans supports SDG 8.8 (safe working conditions), SDG 6 (safe sanitation), SDG 3.9 (fewer deaths from hazardous gases), SDG 10 (reducing inequality) and SDG 13 (methane is a strong greenhouse gas). It covers all three ESG pillars: worker safety (Social), methane tracking (Environmental) and auditable contractor records (Governance). Sanitation and preventive health are eligible CSR activities, so companies can fund pilots through CSR.
 
 Scale of impact
-Phase 1 in one ward can protect around 50 crews. A full city rollout can cover thousands of workers. A national rollout linked to NAMASTE can protect every registered sewer worker in India and their families.
+The proposed pilot covers about 50 crews in one ward. Expansion will depend on results. The long-term aim is to support every city in moving to mechanised cleaning, with Saans as the safety net for exceptional cases.
 
-The goal is simple. No worker should die in a sewer because nobody checked the air. The law already says this. Saans makes sure it actually happens.
+The goal is not just a device that tells a worker whether the air is safe. It is a system that makes sure the responsible people act when it is not.
